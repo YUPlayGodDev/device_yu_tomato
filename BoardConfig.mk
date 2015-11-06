@@ -45,17 +45,6 @@ TARGET_TRANSPARENT_COMPRESSION_METHOD := lz4
 # CPU
 TARGET_CPU_CORTEX_A53 := true
 
-# Dexopt, only if we can fit that in
-ifneq ($(TARGET_TRANSPARENT_COMPRESSION_METHOD),)
-ifeq ($(HOST_OS),linux)
-  ifeq ($(TARGET_BUILD_VARIANT),user)
-    ifeq ($(WITH_DEXPREOPT),)
-      WITH_DEXPREOPT := true
-    endif
-  endif
-endif
-endif
-
 # GPS
 TARGET_GPS_HAL_PATH := $(DEVICE_PATH)/gps
 TARGET_NO_RPC := true
