@@ -192,6 +192,10 @@ vendor/lib/libscale.so
 etc/firmware/a420_pfp.fw
 etc/firmware/a420_pm4.fw
 
+# Libstlport (Required for old Adreno Blobs)
+lib/libstlport.so
+lib64/libstlport.so
+
 # Media
 vendor/lib/libDivxDrm.so
 vendor/lib/libExtendedExtractor.so
