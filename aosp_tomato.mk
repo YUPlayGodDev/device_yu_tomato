@@ -1,5 +1,5 @@
 #
-# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2015 Android Open Source Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -19,6 +19,9 @@ ifneq ($(TOMATO_32_BIT),true)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 endif
 
+# Inherit some common AOSP stuff.
+$(call inherit-product, vendor/aosp/common.mk)
+
 TARGET_LOCALES := en_US en_IN en_GB hi_IN mr_IN ml_IN ta_IN kn_IN te_IN
 
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
@@ -28,7 +31,7 @@ $(call inherit-product, device/yu/tomato/device.mk)
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := tomato
-PRODUCT_NAME := full_tomato
+PRODUCT_NAME := aosp_tomato
 PRODUCT_BRAND := YU
 PRODUCT_MODEL := AO5510
 PRODUCT_MANUFACTURER := YU
