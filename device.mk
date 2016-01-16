@@ -74,6 +74,10 @@ ADDITIONAL_DEFAULT_PROPERTIES += \
     ro.usb.id.ums_adb=9015 \
     ro.usb.vid=05c6
 
+# libhealthd library as the supplement of off-mode charging
+PRODUCT_PACKAGES += \
+    libhealthd.msm
+
 # GPS
 PRODUCT_PACKAGES += \
     gps.msm8916

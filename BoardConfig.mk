@@ -36,6 +36,10 @@ BOARD_CAMERA_SENSORS := imx135_cp8675 imx214_cp8675 ov5648_cp8675
 TARGET_USE_VENDOR_CAMERA_EXT := true
 USE_DEVICE_SPECIFIC_CAMERA := true
 
+# Charger
+BOARD_CHARGER_DISABLE_INIT_BLANK := true
+BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
+
 # CMHW
 BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw/src
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touchscreen/touchscreen_dev/gesture_ctrl"
