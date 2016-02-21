@@ -40,8 +40,7 @@ USE_DEVICE_SPECIFIC_CAMERA := true
 BOARD_CHARGER_DISABLE_INIT_BLANK := true
 BOARD_HAL_STATIC_LIBRARIES := libhealthd.msm
 
-# CMHW
-BOARD_HARDWARE_CLASS += $(DEVICE_PATH)/cmhw/src
+# DT2W
 TARGET_TAP_TO_WAKE_NODE := "/sys/devices/virtual/touchscreen/touchscreen_dev/gesture_ctrl"
 
 # CPU
